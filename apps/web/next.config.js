@@ -1,7 +1,4 @@
 module.exports = {
-    experimental: {
-        typedRoutes: true,
-    },
     // output: "standalone",
     reactStrictMode: true,
     transpilePackages: ["ui"],

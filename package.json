@@ -9,12 +9,7 @@
     "scripts": {
         "build": "turbo run build",
         "dev": "turbo run dev",
-        "lint": "turbo run lint",
-        "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-        "check-format": "prettier --check \"**/*.{ts,tsx,md}\"",
-        "check-lint": "eslint . --ext ts --ext tsx --ext js --ext jsx --ext mdx",
-        "check-types": "tsc --noEmit",
-        "prepare": "husky install"
+        "lint": "turbo run lint"
     },
     "devDependencies": {
         "eslint-config-custom": "workspace:*",
@@ -24,25 +19,6 @@
     },
     "engines": {
         "node": ">=14.0.0"
-    },
-    "dependencies": {
-        "lint-staged": "^13.2.0"
-    },
-    "lint-staged": {
-        "apps/**/*.{js,ts,jsx,tsx}": [
-            "eslint --fix"
-        ],
-        "packages/ui/**/*.{js,ts,jsx,tsx}": [
-            "eslint --fix"
-        ],
-        "*.json": [
-            "prettier --write"
-        ]
-    },
-    "husky": {
-        "hooks": {
-            "pre-commit": "eslint ."
-        }
     },
     "packageManager": "pnpm@7.28.0"
 }
