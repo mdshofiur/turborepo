@@ -1,8 +1,18 @@
 module.exports = {
     experimental: {
-        appDir: true,
         typedRoutes: true,
     },
+    // output: "standalone",
     reactStrictMode: true,
-    transpilePackages: ['ui'],
+    transpilePackages: ["ui"],
+    async redirects() {
+        return [
+          {
+            source: '/about',
+            destination: '/test',
+            permanent: true,
+          },
+        ]
+    }
 };
+

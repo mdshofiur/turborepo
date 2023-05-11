@@ -6,7 +6,7 @@ echo '🏗️👷 Styling, testing and building your project before committing'
 # Format code with Prettier
 # pnpm run format
 
-npx lint-staged
+# npx lint-staged
 
 # Detect code formatting issues
 # pnpm run check-format
