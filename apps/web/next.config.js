@@ -3,6 +3,9 @@ module.exports = {
     experimental: {
       serverActions: true,
     },
+    images: {
+      domains: ['via.placeholder.com'],
+    },
     reactStrictMode: true,
     transpilePackages: ["ui"],
     async redirects() {
