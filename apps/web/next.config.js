@@ -1,5 +1,8 @@
 module.exports = {
     // output: "standalone",
+    experimental: {
+      serverActions: true,
+    },
     reactStrictMode: true,
     transpilePackages: ["ui"],
     async redirects() {
@@ -10,6 +13,14 @@ module.exports = {
             permanent: true,
           },
         ]
-    }
+    },
+    async rewrites() {
+      return [
+        {
+          source: '/hello',
+          destination: '/test-2',
+        },
+      ];
+    },
 };
 
