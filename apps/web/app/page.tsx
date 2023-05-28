@@ -25,12 +25,6 @@ const Web = async () => {
           }}>
             {artistData.map((item: any) => (
               <div key={item.id}>
-                <Image 
-                 src={item.thumbnailUrl} 
-                 alt={item.title} 
-                 width={200} 
-                 height={100}
-                 style={{ borderRadius: '5px', boxShadow: '0px 0px 5px rgba(0, 0, 0, 0.3)' }} />
                 <p style={{
                   textAlign: 'center',
                   fontSize: '12px',
