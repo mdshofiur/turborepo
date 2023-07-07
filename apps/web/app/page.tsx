@@ -24,7 +24,7 @@ const Web = async () => {
             margin: '0 50px',
           }}>
             {artistData.map((item: any) => (
-              <div key={item.id}>
+              <div key={item.id}></div>
                 <p style={{
                   textAlign: 'center',
                   fontSize: '12px',
