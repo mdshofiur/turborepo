@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { useContext } from 'react';
 import { StoreContext } from '@/context/store-context';
 import { Input as CustomInput } from '@/components/Input';
@@ -15,13 +15,11 @@ const Page = () => {
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
         e.preventDefault();
-        console.log('forwardInput', forwardInput);
+        console.log('forwardInput', forwardInput.current?.value);
         if (!ref.current?.value) return;
         setInputList([...inputList, ref.current!.value]);
         ref.current!.value = '';
     };
-
-    
 
     return (
         <section className="container mx-auto py-12 bg-slate-400 min-h-screen px-5">
