@@ -17,7 +17,6 @@ async function getTodos() {
   }
 
 
-
 const Page = async () => {
 
     const albumsData = await getData();
@@ -25,10 +24,6 @@ const Page = async () => {
     const todosData = await getTodos();
 
     const [todos, albums ] = await Promise.all([albumsData, todosData])
-    
-    console.log("🚀 ~ albums:", albums.slice(0,1))
-
-    console.log("🚀 ~ todos:", todos.slice(0,1))
 
     return (
         <div className='container mx-auto py-12'>
