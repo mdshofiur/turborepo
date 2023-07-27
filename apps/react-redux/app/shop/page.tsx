@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useTransition} from 'react';
 
 async function getData() {
     const res = await fetch('https://jsonplaceholder.typicode.com/albums', { cache: 'no-store' })
@@ -24,6 +24,8 @@ const Page = async () => {
     const todosData = await getTodos();
 
     const [todos, albums ] = await Promise.all([albumsData, todosData])
+
+   
 
     return (
         <div className='container mx-auto py-12'>
