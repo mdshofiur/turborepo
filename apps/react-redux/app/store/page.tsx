@@ -20,19 +20,23 @@ const Page = () => {
     };
 
     const [isPending, startTransition] = useTransition();
-
+   
     
     const onClick = () => {
         console.log("onClick");
     }
 
- 
     console.log("🚀 isPending:", isPending);
 
 
     return (
         <section className="container mx-auto py-12 bg-slate-400 min-h-screen px-5">
             <p>Theme: {store}</p>
+            {
+                isPending &&
+                     <p>Loading...</p>
+                
+            }
             <button
                 onClick={() => {
                     startTransition(() => {
