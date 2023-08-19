@@ -7,7 +7,7 @@ dotenv.config();
 
 const app: Express = express();
 app.use(cros());
-const port = 2000;
+const port = 5000;
 app.use(express.json());
 
 app.get("/", (req: Request, res: Response) => {
